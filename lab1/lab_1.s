@@ -35,7 +35,8 @@ result:				#result
 	.text
 	.global _start
 	
-_start:	
+_start:
+	#komentarz
 	NOP
 	MOVL	$write,%eax
 	MOVL	$stdout,%ebx
