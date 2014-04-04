@@ -112,19 +112,19 @@ disp_line:
 	INT	$kernel
 
 	MOVB	tmp, %al
-	AND	$0x0F,%al
+	AND	$0x0F,%al #licza sie tylko mlodsze bity
 	CMPB	$10,%al
-	JB	digit1
-	ADDB	$('A'-0x0A),%al
+	JB	digit1 # Jump if Below - jezeli w al jest liczba mniejsza od 10 to nie trzeba jej modyfikowac
+	ADDB	$('A'-0x0A),%al #jezeli liczba wieksza lub rowna 10 to ...
 	JMP	insert1
 digit1:
 	ADDB	$'0',%al
 insert1:
-	MOV	%al,%ah
+	MOV	%al,%ah # po co to?
 
 	MOVB	%al,tmp
-	SHR	$4,%al
-	CMPB	$10,%al
+	SHR	$4,%al #przesuwa bity w rejestrze al o 4 bity w prawo
+	CMPB	$10,%al #compare byte
 	JB	digit2
 	ADDB	$('A'-0x0A),%al
 	JMP	insert2
