@@ -16,7 +16,7 @@
 
 #----------------------------------------------------------------
 
-	.data
+.data
 
 table:					# table of items
 	.long	10,70,50,90,60,80,40,20,0,30, 12
@@ -144,8 +144,8 @@ disp_item:
 make_string:
 	MOVL 	$0x20202020, number # 0x20 = 32 spacja (ASCII)
 	MOVW	$0x2020, line_no
-	MOV	%esi,%eax
-	MOVL	$line_no + 2,%edi
+	MOV	%esi,%eax  # indeks tablicy do eax
+	MOVL	$line_no + 2,%edi # ?? druga cyfra do edi?
 	CALL	n2str
 
 	MOV	%ebx,%eax
