@@ -58,7 +58,7 @@ _start:
 	MOVL	$arg2txt,%ecx
 	CALL	disp_line
 
-	MOVB	arg1,%al
+ 	MOVB	arg1,%al
 	ADDB	arg2,%al
 	MOVB	%al,result
 

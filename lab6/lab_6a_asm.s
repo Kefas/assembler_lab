@@ -1,7 +1,7 @@
 #----------------------------------------------------------------
 # Funkcja do programu lab_6a - Asemblery Laboratorium IS II rok
 #----------------------------------------------------------------
-
+	.code32
 	.text
 	.type facta, @function
 	.globl facta	

@@ -19,7 +19,7 @@ starttxt:			#first message
 endtxt:				#last message
 	.ascii	"Finish\n"
 gurutxt:
-	.ascii	"A jem assembler guru\n"	#other message
+	.ascii	"Aj em assembler guru\n"	#other message
 
 	.text
 	.global _start
