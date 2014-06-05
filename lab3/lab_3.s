@@ -45,9 +45,10 @@ dataend:
 #----------------------------------------------------------------
 
 	.text
-	.global _start
+	.type lab3, @function
+	.global lab3
 
-_start:
+lab3:
 	NOP
 	MOVL	$write,%eax
 	MOVL	$stdout,%ebx
