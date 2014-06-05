@@ -7,7 +7,7 @@
 #  To run:     ./lab_2
 #
 #----------------------------------------------------------------
-
+	.code32
 	.equ	kernel,0x80	#Linux system functions entry
 	.equ	write,0x04	#write data to file function
 	.equ	exit,0x01	#exit program function
@@ -45,9 +45,10 @@ reslen:
 	.long	3
  
 	.text
-	.global _start
+	.type lab2, @function
+	.global lab2
 	
-_start:
+lab2:
 	NOP
 
 	MOVB	arg1,%al

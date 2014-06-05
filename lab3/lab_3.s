@@ -173,7 +173,7 @@ n2str:
 nextdig:		
 	XOR	%edx,%edx	#iloraz do EAX, reszta do EDX
 	DIV	%ebx		# EDX:EAX div EBX
-	ADDB	$dig0,%dl	# remainder in EDX
+	ADDB	$'0',%dl	# remainder in EDX
 	MOVB	%dl,(%edi)	# *(EDI) = character
 	CMPL	$0,%eax		# quotient in EAX 
 	JZ	empty

@@ -11,6 +11,8 @@ int main(void){
 
   /* funkcja dodajaca do siebie argumenty i zwaracajaca sume */
   printf("shit got real %d\n", dodaj(26,26));
+
+  choinka(9);
   
   return 1;
 }
