@@ -37,3 +37,6 @@ void main( void )
  for( i = 0; i <= 30; i++ )
    printf( "Fib( %2d ) = %d FibA= %d\n", i, fib_iter( i ), fibai( i ) );
 }
+#----------------------------------------------------------------	
+# Funkcja do programu lab_6b - Asemblery Laboratorium IS II rok
+#----------------------------------------------------------------

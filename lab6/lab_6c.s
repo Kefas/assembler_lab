@@ -22,7 +22,7 @@ main:
 	movl $fmt, %ebx	#przekazujemy w postaci adresu
 	pushl %ebx
 	call printf
-	addl $8, %esp	#usuwanie ze stosu - przesuniecie wskaznika stosu
+	addl $8, %esp	#usuwanie ze stosu - przesuniecie wskaznika stosu(dodawanie a nie odejmowanie)
 	nop
 	pushl $0 
 	call exit
