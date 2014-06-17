@@ -1,0 +1,24 @@
+	.type digits_count, @function
+	.global digits_count
+	.data
+	
+.text
+#long digits_count(char *buf, long *digits, long *max_digit)
+.global digits_count
+.type digits_count,@function
+
+#buf=8,digits=12,max_digit=16
+digits_count:
+push %ebp
+movl %esp,%ebp
+
+movl 8(%ebp),%ebx #ebx=*buf
+movl $0,%ecx #licznik petli
+loopik:
+#(%ebx,%ecx,4) aktualny element
+incl %ecx #zwieksz licznik petli
+cmpl $0,%ebx #koniec stringa?
+jne loopik
+
+leave
+ret
