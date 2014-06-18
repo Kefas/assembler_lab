@@ -11,16 +11,24 @@ extern void deriv(long *in, long n, long *out, long m);
 //
 
 int main(void){
-  long input[6] = {1,3,10,41,50,60};
+  long input[6] = {1,3,10,20,50,82};
   long size_in = 6;
   long out[6] = {0,0,0,0,0};
-  long stopien = 0;
+  long stopien = 2;
   int i;
-  
+ 
+  printf("Tablica in:\n");  
+  for( i=0;i<6;i++)
+    printf("%d = %ld\n", i ,input[i]);
+ 
+
   deriv(input, size_in, out, stopien);
 
+ 
+  printf("Tablica out\n");
   for(i =  0; i<6;i++)
     printf("el %d = %ld\n", i, out[i]); 
+
 
 
   return 0;
