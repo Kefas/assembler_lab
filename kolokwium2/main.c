@@ -14,7 +14,7 @@ int main(void){
   long input[6] = {1,3,10,20,50,82};
   long size_in = 6;
   long out[6] = {0,0,0,0,0};
-  long stopien = 2;
+  long stopien = 1;
   int i;
  
   printf("Tablica in:\n");  
@@ -22,10 +22,11 @@ int main(void){
     printf("%d = %ld\n", i ,input[i]);
  
 
+  printf("\nStopien %d\n", stopien);
   deriv(input, size_in, out, stopien);
 
  
-  printf("Tablica out\n");
+  printf("\nTablica out\n");
   for(i =  0; i<6;i++)
     printf("el %d = %ld\n", i, out[i]); 
 
