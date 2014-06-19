@@ -1,0 +1,15 @@
+	.type deriv, @function
+	.global deriv
+
+	.data
+
+	.text
+
+deriv:
+	pushl %ebp
+	movl %esp, %ebp
+
+
+
+	popl %ebp
+	ret

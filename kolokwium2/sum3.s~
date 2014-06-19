@@ -1,0 +1,15 @@
+	.text
+	.type sum3,@function
+	.global sum3
+sum3:
+	pushl %ebp
+	movl %esp, %ebp
+	finit
+	fldz
+	FADDL  8(%ebp)
+	FADDL 16(%ebp)
+	FADDL 24(%ebp)
+end:
+	movl %ebp, %esp
+	popl %ebp
+	ret
