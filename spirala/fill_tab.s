@@ -1,4 +1,5 @@
-	.code32
+	.code32 # pracuje na 64 - bitowym systemie operacyjnym
+	
 	.type fill_tab, @function
 	.global fill_tab
 	.data
@@ -16,8 +17,8 @@ kolumna:
 	
 
 	# 8(%ebp) adres tablicy
-	# 12(%ebp) rozmiar cols
-	# 16(%ebp) rozmiar rows
+	# 12(%ebp) rozmiar rows
+	# 16(%ebp) rozmiar cols
 
 fill_tab:
 	pushl %ebp
@@ -32,9 +33,9 @@ fill_tab:
 	decl rozmiar
 
 	movl 12(%ebp), %eax
-	movl %eax, kolumna
-	movl 16(%ebp), %eax
 	movl %eax, wiersz
+	movl 16(%ebp), %eax
+	movl %eax, kolumna
 	
 	movl $1, %edx #przesuniecie - najpierw idziemy w prawo
 	movl $0, %edi
@@ -214,6 +215,8 @@ koniec:
 
 	popl %ebp
 	ret
+
+	# funkcje ponizsze powoduja cofniecie ostatniej operacji na edi
 
 wroc_w_prawo:
 	pushl %eax

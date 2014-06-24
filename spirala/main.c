@@ -1,3 +1,6 @@
+//wersja dzialajaca dla macierzy kwadratowych
+
+
 #include <stdio.h>
 
 extern void fill_tab(long *tab, long n, long m);
